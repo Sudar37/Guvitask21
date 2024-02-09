@@ -9,9 +9,8 @@ public class Que2 {
 
 	public static void main(String[] args) {
 		
-
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+	WebDriver driver = new ChromeDriver();
+	driver.manage().window().maximize();
 		
         try {
             // Navigate to the URL
@@ -24,9 +23,9 @@ public class Que2 {
             // Switch to the newly opened window
             String originalWindowHandle = driver.getWindowHandle();
             for (String windowHandle : driver.getWindowHandles()) {
-                if (!windowHandle.equals(originalWindowHandle)) {
-                    driver.switchTo().window(windowHandle);
-                    break;
+            if (!windowHandle.equals(originalWindowHandle)) {
+        	driver.switchTo().window(windowHandle);
+                break;
                 }
             }
 
@@ -52,12 +51,11 @@ public class Que2 {
             } else {
                 System.out.println("Original window is not active.");
             }
-        } catch (Exception e) {
+            } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+            } finally {
             // Close the browser 
-            //driver.quit();
+            driver.quit();
         }
-	}
-
+     }
 }
