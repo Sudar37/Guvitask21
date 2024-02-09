@@ -9,8 +9,8 @@ public class Que3 {
 
 	public static void main(String[] args) {
 	
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+	WebDriver driver = new ChromeDriver();
+	driver.manage().window().maximize();
         try {
             // Navigate to the URL
             driver.get("http://the-internet.herokuapp.com/nested_frames");
@@ -59,12 +59,11 @@ public class Que3 {
             } else {
                 System.out.println("Page title verification failed.");
             }
-        } catch (Exception e) {
+            } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+            } finally {
             // Close the browser instance
-            //driver.quit();
+            driver.quit();
         }
-	}
-
+     }
 }
